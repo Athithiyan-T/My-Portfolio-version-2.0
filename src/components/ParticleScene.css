@@ -1,0 +1,51 @@
+.antigravity-container {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+  background-color: transparent;
+}
+
+.shape {
+  position: absolute;
+  bottom: -100px;
+  animation: floatUp linear infinite;
+  opacity: 0.15;
+}
+
+.shape.square {
+  border: 2px solid var(--accent);
+  background: transparent;
+  box-shadow: 0 0 15px rgba(255, 0, 60, 0.4), inset 0 0 10px rgba(255, 0, 60, 0.2);
+}
+
+.shape.triangle {
+  width: 0;
+  height: 0;
+  border-left: solid transparent;
+  border-right: solid transparent;
+  border-bottom: solid rgba(255, 0, 60, 0.5);
+  background: transparent;
+  filter: drop-shadow(0 0 8px rgba(255, 0, 60, 0.8));
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(20vh) translateX(0) rotate(0deg) scale(0.8);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-50vh) translateX(30px) rotate(180deg) scale(1);
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-120vh) translateX(-30px) rotate(360deg) scale(1.2);
+    opacity: 0;
+  }
+}

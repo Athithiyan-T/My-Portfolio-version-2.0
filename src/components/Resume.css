@@ -1,0 +1,35 @@
+.resume__card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 48px 40px;
+  flex-wrap: wrap;
+}
+
+.resume__heading {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.resume__sub {
+  color: var(--text-muted);
+  max-width: 480px;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.resume__btn {
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-size: 0.9rem;
+  padding: 14px 32px;
+}
+
+@media (max-width: 600px) {
+  .resume__card { flex-direction: column; padding: 32px 24px; }
+}

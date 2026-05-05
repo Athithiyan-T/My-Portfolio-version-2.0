@@ -1,0 +1,267 @@
+/* ══════════════════════════════════════════════════
+   EXPERIENCE SECTION — 3D Timeline Design
+   Black × Red Hacker Aesthetic
+══════════════════════════════════════════════════ */
+
+/* ── Timeline wrapper ─────────────────────────── */
+.exp__timeline {
+  position: relative;
+  padding-left: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ── Vertical glowing line ────────────────────── */
+.exp__line {
+  position: absolute;
+  left: 9px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 0, 0, 0.8) 0%,
+    rgba(255, 0, 0, 0.3) 60%,
+    transparent 100%
+  );
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.35);
+  border-radius: 2px;
+}
+
+/* ── Card ─────────────────────────────────────── */
+.exp__card {
+  position: relative;
+  animation: expFadeIn 0.7s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+@keyframes expFadeIn {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ── Timeline dot ─────────────────────────────── */
+.exp__dot {
+  position: absolute;
+  left: -31px;
+  top: 22px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exp__dot-inner {
+  width: 12px;
+  height: 12px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.9), 0 0 24px rgba(255, 0, 0, 0.4);
+  flex-shrink: 0;
+}
+
+/* Active/current dot ping animation */
+.exp__dot-ping {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 0, 0, 0.6);
+  animation: dotPing 1.8s ease-out infinite;
+}
+
+@keyframes dotPing {
+  0%   { transform: scale(1);   opacity: 0.8; }
+  100% { transform: scale(2.4); opacity: 0;   }
+}
+
+/* ── Card body ────────────────────────────────── */
+.exp__body {
+  background: linear-gradient(
+    135deg,
+    rgba(20, 20, 20, 0.97) 0%,
+    rgba(12, 12, 12, 0.99) 100%
+  );
+  border: 1px solid rgba(255, 0, 0, 0.15);
+  border-radius: 16px;
+  padding: 28px 30px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Corner accent — top-left */
+.exp__body::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 55px; height: 55px;
+  border-top: 2px solid rgba(255, 0, 0, 0.45);
+  border-left: 2px solid rgba(255, 0, 0, 0.45);
+  border-radius: 16px 0 0 0;
+  transition: width 0.4s ease, height 0.4s ease;
+}
+
+/* Corner accent — bottom-right */
+.exp__body::after {
+  content: '';
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 55px; height: 55px;
+  border-bottom: 2px solid rgba(255, 0, 0, 0.25);
+  border-right: 2px solid rgba(255, 0, 0, 0.25);
+  border-radius: 0 0 16px 0;
+  transition: width 0.4s ease, height 0.4s ease;
+}
+
+.exp__card--active .exp__body {
+  border-color: rgba(255, 0, 0, 0.35);
+  box-shadow:
+    0 0 30px rgba(255, 0, 0, 0.12),
+    inset 0 0 40px rgba(255, 0, 0, 0.03);
+}
+
+.exp__body:hover {
+  border-color: rgba(255, 0, 0, 0.55);
+  box-shadow:
+    0 8px 40px rgba(255, 0, 0, 0.2),
+    0 0 0 1px rgba(255, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+.exp__body:hover::before { width: 100%; height: 100%; }
+.exp__body:hover::after  { width: 100%; height: 100%; }
+
+/* ── Header row ───────────────────────────────── */
+.exp__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.exp__meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* "● Current" badge */
+.exp__badge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: #00e676;
+  background: rgba(0, 230, 118, 0.1);
+  border: 1px solid rgba(0, 230, 118, 0.35);
+  border-radius: 20px;
+  padding: 3px 10px;
+  letter-spacing: 0.4px;
+  animation: badgePulse 2.5s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+  0%, 100% { box-shadow: 0 0 6px rgba(0, 230, 118, 0.3);  }
+  50%       { box-shadow: 0 0 16px rgba(0, 230, 118, 0.6); }
+}
+
+.exp__type {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: rgba(255, 80, 80, 0.7);
+  background: rgba(255, 0, 0, 0.07);
+  border: 1px solid rgba(255, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 3px 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* ── Role & Company ───────────────────────────── */
+.exp__role {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.4px;
+  margin-bottom: 6px;
+  font-family: var(--font-display);
+  text-shadow: 0 0 12px rgba(255, 80, 80, 0.2);
+}
+
+.exp__company {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: rgba(255, 80, 80, 0.85);
+  margin-bottom: 18px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.exp__company-icon { font-size: 1rem; }
+
+/* ── Description ──────────────────────────────── */
+.exp__desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: 20px;
+  border-left: 2px solid rgba(255, 0, 0, 0.25);
+  padding-left: 14px;
+}
+
+/* ── Highlights list ──────────────────────────── */
+.exp__highlights {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.exp__highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: rgba(220, 220, 220, 0.85);
+  line-height: 1.6;
+}
+
+.exp__bullet {
+  color: var(--accent);
+  font-size: 0.75rem;
+  margin-top: 3px;
+  flex-shrink: 0;
+  text-shadow: 0 0 8px rgba(255, 0, 0, 0.7);
+}
+
+/* ── Tech tags ────────────────────────────────── */
+.exp__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.exp__tag {
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.exp__tag:hover {
+  background: rgba(255, 0, 0, 0.15);
+  border-color: rgba(255, 0, 0, 0.5);
+  color: #ff9999;
+  transform: translateY(-2px);
+}
+
+/* ── Responsive ───────────────────────────────── */
+@media (max-width: 600px) {
+  .exp__timeline { padding-left: 28px; }
+  .exp__body     { padding: 22px 18px; }
+  .exp__role     { font-size: 1.1rem; }
+  .exp__header   { flex-direction: column; align-items: flex-start; }
+}

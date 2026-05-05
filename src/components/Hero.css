@@ -1,0 +1,114 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 120px 40px 80px;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* subtle dot-grid background */
+.hero__grid {
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.hero__content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero__badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent);
+  border: 1px solid rgba(0,229,255,0.3);
+  padding: 6px 16px;
+  border-radius: 100px;
+  margin-bottom: 24px;
+  background: rgba(0,229,255,0.05);
+  letter-spacing: 0.5px;
+}
+
+.hero__name {
+  font-size: clamp(2.8rem, 7vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -2px;
+  margin-bottom: 16px;
+}
+
+.hero__highlight {
+  color: #00ff88; /* Unique neon green accent specific to the name */
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.8), 0 0 16px rgba(0, 255, 136, 0.4);
+  animation: name-glow 1.8s ease-in-out infinite alternate;
+}
+
+@keyframes name-glow {
+  from {
+    text-shadow: 0 0 8px rgba(0, 255, 136, 0.8), 0 0 16px rgba(0, 255, 136, 0.4);
+  }
+  to {
+    text-shadow: 0 0 18px rgba(0, 255, 136, 1), 0 0 30px rgba(0, 255, 136, 0.6);
+  }
+}
+
+.hero__role {
+  font-family: var(--font-mono);
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.hero__desc {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 40px;
+  max-width: 480px;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Photo */
+.hero__photo-wrap {
+  width: 280px;
+  height: 280px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+  padding: 4px;
+  box-shadow: 0 0 40px rgba(0,229,255,0.15);
+}
+
+.hero__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 100px 24px 60px;
+    gap: 40px;
+  }
+  .hero__photo-wrap { width: 180px; height: 180px; }
+  .hero__desc { margin: 0 auto 40px; }
+  .hero__actions { justify-content: center; }
+}

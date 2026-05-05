@@ -1,0 +1,182 @@
+.contact__layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 48px;
+  align-items: start;
+}
+
+/* ── Form ─────────────────────────────────────────────── */
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact__field label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.contact__field input,
+.contact__field textarea {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+  resize: vertical;
+}
+
+.contact__field input:focus,
+.contact__field textarea:focus {
+  border-color: var(--accent);
+}
+
+.input--error { border-color: #f87171 !important; }
+
+.contact__error {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: #f87171;
+}
+
+.contact__submit { align-self: flex-start; }
+
+.contact__success {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--surface);
+  border: 1px solid var(--accent);
+  border-radius: 12px;
+  padding: 32px;
+  font-size: 1.05rem;
+}
+
+.contact__success span { font-size: 2rem; }
+
+/* ── Socials ──────────────────────────────────────────── */
+.contact__socials {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact__socials-label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.contact__social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle shimmer sweep on hover */
+.social-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.04) 50%,
+    transparent 70%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+.social-btn:hover::after {
+  transform: translateX(100%);
+}
+
+.social-btn:hover {
+  border-color: var(--brand-color, var(--accent));
+  transform: translateX(6px);
+  background: color-mix(in srgb, var(--brand-color, var(--accent)) 8%, var(--surface));
+  box-shadow:
+    0 0 16px color-mix(in srgb, var(--brand-color, var(--accent)) 35%, transparent),
+    inset 0 0 12px color-mix(in srgb, var(--brand-color, var(--accent)) 6%, transparent);
+}
+
+/* Icon wrapper — holds the SVG */
+.social-btn__icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  flex-shrink: 0;
+  color: var(--brand-color, var(--accent));
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    filter 0.25s ease;
+}
+
+.social-btn:hover .social-btn__icon {
+  background: color-mix(in srgb, var(--brand-color, var(--accent)) 15%, transparent);
+  border-color: color-mix(in srgb, var(--brand-color, var(--accent)) 50%, transparent);
+  transform: scale(1.08) rotate(-4deg);
+  filter: drop-shadow(0 0 8px var(--brand-color, var(--accent)));
+}
+
+.social-btn__icon svg {
+  display: block;
+}
+
+.social-btn__label {
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: var(--text);
+  transition: color 0.2s ease;
+}
+
+.social-btn:hover .social-btn__label {
+  color: var(--brand-color, var(--accent));
+}
+
+@media (max-width: 768px) {
+  .contact__layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}

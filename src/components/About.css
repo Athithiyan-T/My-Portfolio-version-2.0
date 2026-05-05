@@ -1,0 +1,23 @@
+.about__body {
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+.about__body strong { color: var(--text); }
+
+.about__goal {
+  margin-top: 16px;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

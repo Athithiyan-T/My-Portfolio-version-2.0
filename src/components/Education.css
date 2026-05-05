@@ -1,0 +1,45 @@
+.edu__timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-left: 2px solid var(--border);
+  padding-left: 32px;
+  margin-left: 12px;
+}
+
+.edu__item {
+  position: relative;
+  padding-bottom: 48px;
+}
+
+/* timeline dot */
+.edu__item::before {
+  content: '';
+  position: absolute;
+  left: -41px; top: 6px;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 12px rgba(0,229,255,0.4);
+}
+
+.edu__period { margin-bottom: 12px; }
+
+.edu__degree {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.edu__school {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.edu__detail {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
