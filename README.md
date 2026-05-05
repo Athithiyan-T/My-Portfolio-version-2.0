@@ -1,16 +1,99 @@
-# React + Vite
+# Portfolio 2.0 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Excited to announce the launch of my Portfolio 2.0 — rebuilt from the ground up!
 
-Currently, two official plugins are available:
+My previous portfolio was a static site built with HTML, CSS, and JavaScript. While it served its purpose, I wanted something that truly reflects where I am today as a developer.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+So I rebuilt it — completely — using **React.js**.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✦ What's New in Portfolio 2.0
 
-## Expanding the ESLint configuration
+- 🧩 **Latest Projects** — featuring full-stack and AI-integrated work
+- 🛠 **Updated Skills Section** — aligned with my current tech stack
+- 📄 **Updated Resume** — fresh, role-targeted, and recruiter-ready
+- 💼 **New Experience Section** — internship and academic highlights
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🔗 Live Demo
+
+[Coming Soon]
+
+---
+
+## 💻 GitHub Repository
+
+👉 [My-Portfolio-version-2.0](https://github.com/Athithiyan-T/My-Portfolio-version-2.0)
+
+---
+
+## 📝 About This Rebuild
+
+This rebuild was more than a UI refresh — it was a deliberate step in strengthening my foundation as a developer and presenting my work with greater clarity and professionalism.
+
+If you are a recruiter, hiring manager, or fellow developer, I would genuinely appreciate your feedback. Open to full-time opportunities, internships, and collaborations in:
+- **Python Full Stack**
+- **AI-integrated web applications**
+- **Frontend development**
+
+Let's connect and build something meaningful. 🤝
+
+---
+
+## 📁 Project Structure
+
+```
+my_portfolio/
+├── eslint.config.js
+├── index.html
+├── package.json
+├── README.md
+├── vite.config.js
+├── public/
+│   └── index.html
+└── src/
+    ├── App.css
+    ├── App.jsx
+    ├── index.css
+    ├── index.jsx
+    ├── assets/
+    └── components/
+        ├── About.css
+        ├── About.jsx
+        ├── Certifications.css
+        ├── Certifications.jsx
+        ├── Contact.css
+        ├── Contact.jsx
+        ├── Education.css
+        ├── Education.jsx
+        ├── Experience.css
+        ├── Experience.jsx
+        ├── Footer.css
+        ├── Footer.jsx
+        ├── Hero.css
+        ├── Hero.jsx
+        ├── Navbar.css
+        ├── Navbar.jsx
+        ├── ParticleScene.css
+        ├── ParticleScene.jsx
+        ├── Projects.css
+        ├── Projects.jsx
+        ├── Resume.css
+        ├── Resume.jsx
+        ├── Skills.css
+        └── Skills.jsx
+```
+
+---
+
+## 🏗 Tech Stack
+
+- **Frontend:** React.js, Vite
+- **Styling:** CSS3
+- **Build Tool:** Vite
+- **Linting:** ESLint
+
+---
+
