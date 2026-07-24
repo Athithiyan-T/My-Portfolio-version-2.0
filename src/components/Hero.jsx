@@ -54,15 +54,17 @@ function Hero() {
           I'm <span className="hero__highlight glitch-effect">{animatedName}</span>
         </h1>
 
-        <p className="hero__role">
-          Python Full Stack Developer &amp; Generative AI Enthusiast
-        </p>
+       
+          <p className="hero__role">
+  Full-Stack Developer <span className="hero__divider">|</span> AI/ML &amp; DL Engineer
+         </p>
+       
 
-        <p className="hero__desc">
-          Building scalable, accessible full-stack applications with a strong
-          interest in AI & Generative AI‑driven innovation.
-        </p>
-
+       <p className="hero__desc">
+         Building scalable full-stack applications, powered by AI/ML &amp; Deep
+  Learning to create smarter, production-ready products.
+      </p>
+        
         <div className="hero__actions">
           <a href="#projects" className="btn btn-primary">View My Work</a>
           <a href="#resume"  className="btn btn-outline">Download My Resume</a>
