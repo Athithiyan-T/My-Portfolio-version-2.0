@@ -8,7 +8,7 @@ function About() {
 
       <div className="about__body">
      <p>
-  I'm <strong>Athithiyan T</strong>, 👨‍💻Full Stack & AI Engineer | Machine Learning & Deep Learning
+  I'm <strong>Athithiyan T</strong>, 👨‍💻Full Stack & AI Engineer 
 </p>
 <p>
   ⚙️ I specialize in end-to-end development—designing backend systems with Python and REST
