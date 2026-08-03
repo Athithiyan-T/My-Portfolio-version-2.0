@@ -1,6 +1,6 @@
 import React from 'react';
 import './Resume.css';
-import resumePDF from '../assets/Athithiyan_T_Resume.pdf';
+import resumePDF from '../assets/Athithiyan_T__Resume.pdf';
 
 function Resume() {
   return (
@@ -22,7 +22,7 @@ function Resume() {
         */}
         <a
           href={resumePDF}
-          download="Athithiyan_T_Resume.pdf"
+          download="Athithiyan_T__Resume.pdf"
           target="_blank"
           rel="noreferrer"
           className="btn btn-primary resume__btn"
