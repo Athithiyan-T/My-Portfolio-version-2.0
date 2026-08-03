@@ -1,6 +1,6 @@
 import React from 'react';
 import './Resume.css';
-import resumePDF from '../assets/Athithiyan T_full stack developer_resume.pdf';
+import resumePDF from '../assets/Athithiyan_T_Resume.pdf';
 
 function Resume() {
   return (
